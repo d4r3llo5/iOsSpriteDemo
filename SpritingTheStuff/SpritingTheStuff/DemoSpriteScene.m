@@ -8,7 +8,19 @@
 
 #import "DemoSpriteScene.h"
 
+@interface DemoSpriteScene()
+@property BOOL contentCreated;
+@end
+
 @implementation DemoSpriteScene
 
+- (void)didMoveToView:(SKView *)view
+{
+    if (!self.contentCreated)
+    {
+        [self createSceneContents];
+        self.contentCreated = true;
+    }
+}
 
 @end

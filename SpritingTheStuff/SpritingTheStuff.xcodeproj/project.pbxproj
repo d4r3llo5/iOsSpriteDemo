@@ -17,6 +17,10 @@
 		26BFA0A81ADAEA0900AE9A68 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BFA0A71ADAEA0900AE9A68 /* SpriteKit.framework */; };
 		26BFA0AC1ADAEB2000AE9A68 /* SpriteSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BFA0AB1ADAEB2000AE9A68 /* SpriteSceneView.m */; };
 		26BFA0AF1ADAEFD400AE9A68 /* DemoSpriteScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BFA0AE1ADAEFD400AE9A68 /* DemoSpriteScene.m */; };
+		26D6597C1ADB03F300A83A2E /* BodyTypeLarge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26D659781ADB03F300A83A2E /* BodyTypeLarge.jpg */; };
+		26D6597D1ADB03F300A83A2E /* BoxingGloveLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D659791ADB03F300A83A2E /* BoxingGloveLeft.png */; };
+		26D6597E1ADB03F300A83A2E /* BoxingGloveRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D6597A1ADB03F300A83A2E /* BoxingGloveRight.png */; };
+		26D6597F1ADB03F300A83A2E /* WiiBoxing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26D6597B1ADB03F300A83A2E /* WiiBoxing.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		26BFA0AD1ADAEB3300AE9A68 /* SpriteSceneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteSceneView.h; sourceTree = "<group>"; };
 		26BFA0AE1ADAEFD400AE9A68 /* DemoSpriteScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSpriteScene.m; sourceTree = "<group>"; };
 		26BFA0B01ADAEFE300AE9A68 /* DemoSpriteScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSpriteScene.h; sourceTree = "<group>"; };
+		26D659781ADB03F300A83A2E /* BodyTypeLarge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BodyTypeLarge.jpg; sourceTree = "<group>"; };
+		26D659791ADB03F300A83A2E /* BoxingGloveLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxingGloveLeft.png; sourceTree = "<group>"; };
+		26D6597A1ADB03F300A83A2E /* BoxingGloveRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxingGloveRight.png; sourceTree = "<group>"; };
+		26D6597B1ADB03F300A83A2E /* WiiBoxing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WiiBoxing.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 		26BFA0801ADADFE300AE9A68 /* SpritingTheStuff */ = {
 			isa = PBXGroup;
 			children = (
+				26D659771ADB03F300A83A2E /* ImageReferences */,
 				26BFA0AE1ADAEFD400AE9A68 /* DemoSpriteScene.m */,
 				26BFA0B01ADAEFE300AE9A68 /* DemoSpriteScene.h */,
 				26BFA0AB1ADAEB2000AE9A68 /* SpriteSceneView.m */,
@@ -131,6 +140,17 @@
 				26BFA09C1ADADFE300AE9A68 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26D659771ADB03F300A83A2E /* ImageReferences */ = {
+			isa = PBXGroup;
+			children = (
+				26D659781ADB03F300A83A2E /* BodyTypeLarge.jpg */,
+				26D659791ADB03F300A83A2E /* BoxingGloveLeft.png */,
+				26D6597A1ADB03F300A83A2E /* BoxingGloveRight.png */,
+				26D6597B1ADB03F300A83A2E /* WiiBoxing.jpg */,
+			);
+			path = ImageReferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BFA08D1ADADFE300AE9A68 /* Main.storyboard in Resources */,
+				26D6597D1ADB03F300A83A2E /* BoxingGloveLeft.png in Resources */,
 				26BFA0921ADADFE300AE9A68 /* LaunchScreen.xib in Resources */,
+				26D6597F1ADB03F300A83A2E /* WiiBoxing.jpg in Resources */,
+				26D6597E1ADB03F300A83A2E /* BoxingGloveRight.png in Resources */,
 				26BFA08F1ADADFE300AE9A68 /* Images.xcassets in Resources */,
+				26D6597C1ADB03F300A83A2E /* BodyTypeLarge.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +456,7 @@
 				26BFA0A31ADADFE300AE9A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26BFA0A41ADADFE300AE9A68 /* Build configuration list for PBXNativeTarget "SpritingTheStuffTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +465,7 @@
 				26BFA0A61ADADFE300AE9A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
