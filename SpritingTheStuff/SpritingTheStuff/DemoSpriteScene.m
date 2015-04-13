@@ -23,4 +23,19 @@
     }
 }
 
+- (void)createSceneContents
+{
+    self.backgroundColor = [SKColor blueColor];
+    self.scaleMode = SKSceneScaleModeAspectFit;
+    [self addChild: [self newDemoNode]];
+}
+
+- (SKSpriteNode*)newDemoNode
+{
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"BodyTypeLarge" ofType:@"png"];
+    SKSpriteNode* fighterBody = [SKSpriteNode spriteNodeWithImageNamed:imagePath];
+    fighterBody.position = CGPointMake(100, 100);
+    return fighterBody;
+}
+
 @end

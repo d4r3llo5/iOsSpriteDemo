@@ -24,6 +24,17 @@
     spriteMainView.showsDrawCount = YES;
     spriteMainView.showsNodeCount = YES;
     spriteMainView.showsFPS = YES;
+    
+    
+    NSString *path = [[NSBundle mainBundle] resourcePath];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSError *error = [[NSError alloc] init];
+    NSArray *directoryAndFileNames = [fm contentsOfDirectoryAtPath:path error:&error];
+    
+    for (NSString* str in directoryAndFileNames) {
+        NSLog(@"Found: '%@' in bundle", str);
+    }
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated
