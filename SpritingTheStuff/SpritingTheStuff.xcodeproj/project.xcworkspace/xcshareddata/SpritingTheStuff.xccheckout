@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C441EEDF-78AF-4FE9-9544-E8D229323B61</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SpritingTheStuff</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D60DBB28437EF967263F9B4DE52A58297C124B3A</key>
+		<string>github.com:d4r3llo5/iOsSpriteDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SpritingTheStuff/SpritingTheStuff.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D60DBB28437EF967263F9B4DE52A58297C124B3A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:d4r3llo5/iOsSpriteDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D60DBB28437EF967263F9B4DE52A58297C124B3A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D60DBB28437EF967263F9B4DE52A58297C124B3A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOsSpriteDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
