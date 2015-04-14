@@ -10,29 +10,29 @@
 	<string>SpritingTheStuff</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D60DBB28437EF967263F9B4DE52A58297C124B3A</key>
+		<key>57D60C34010DB2575B465936D20E57ED980F810B</key>
 		<string>github.com:d4r3llo5/iOsSpriteDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SpritingTheStuff/SpritingTheStuff.xcodeproj</string>
+	<string>iOsSpriteDemo/SpritingTheStuff/SpritingTheStuff.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D60DBB28437EF967263F9B4DE52A58297C124B3A</key>
-		<string>../../..</string>
+		<key>57D60C34010DB2575B465936D20E57ED980F810B</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:d4r3llo5/iOsSpriteDemo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D60DBB28437EF967263F9B4DE52A58297C124B3A</string>
+	<string>57D60C34010DB2575B465936D20E57ED980F810B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D60DBB28437EF967263F9B4DE52A58297C124B3A</string>
+			<string>57D60C34010DB2575B465936D20E57ED980F810B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOsSpriteDemo</string>
 		</dict>

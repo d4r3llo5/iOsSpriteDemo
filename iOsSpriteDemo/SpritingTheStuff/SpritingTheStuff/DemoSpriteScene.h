@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "DemoFighterBody.h"
+#import "DemoFighterUser.h"
 
 @interface DemoSpriteScene : SKScene
 

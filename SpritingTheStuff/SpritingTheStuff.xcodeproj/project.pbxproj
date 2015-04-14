@@ -22,6 +22,7 @@
 		26D6597F1ADB03F300A83A2E /* WiiBoxing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26D6597B1ADB03F300A83A2E /* WiiBoxing.jpg */; };
 		3B105A571ADB0AD200968CE6 /* BodyTypeLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B105A561ADB0AD200968CE6 /* BodyTypeLarge.png */; };
 		3B105A591ADB11EF00968CE6 /* kit.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3B105A581ADB11EF00968CE6 /* kit.atlas */; };
+		3B50102A1ADD5A3600DE0B21 /* KitsHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5010291ADD5A3600DE0B21 /* KitsHead.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		26D6597B1ADB03F300A83A2E /* WiiBoxing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WiiBoxing.jpg; sourceTree = "<group>"; };
 		3B105A561ADB0AD200968CE6 /* BodyTypeLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BodyTypeLarge.png; sourceTree = "<group>"; };
 		3B105A581ADB11EF00968CE6 /* kit.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = kit.atlas; path = Atlases/kit.atlas; sourceTree = "<group>"; };
+		3B5010291ADD5A3600DE0B21 /* KitsHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KitsHead.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		26D659771ADB03F300A83A2E /* ImageReferences */ = {
 			isa = PBXGroup;
 			children = (
+				3B5010291ADD5A3600DE0B21 /* KitsHead.png */,
 				3B105A561ADB0AD200968CE6 /* BodyTypeLarge.png */,
 				26D659791ADB03F300A83A2E /* BoxingGloveLeft.png */,
 				26D6597A1ADB03F300A83A2E /* BoxingGloveRight.png */,
@@ -241,6 +244,7 @@
 				26BFA0921ADADFE300AE9A68 /* LaunchScreen.xib in Resources */,
 				26D6597F1ADB03F300A83A2E /* WiiBoxing.jpg in Resources */,
 				3B105A591ADB11EF00968CE6 /* kit.atlas in Resources */,
+				3B50102A1ADD5A3600DE0B21 /* KitsHead.png in Resources */,
 				26D6597E1ADB03F300A83A2E /* BoxingGloveRight.png in Resources */,
 				26BFA08F1ADADFE300AE9A68 /* Images.xcassets in Resources */,
 				3B105A571ADB0AD200968CE6 /* BodyTypeLarge.png in Resources */,

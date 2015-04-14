@@ -9,5 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface DemoFighterUser : SKSpriteNode
-
+- (void) animateHitAtPunch: (CGPoint)location;
+- (void) createFighterSpriteForWindow: (CGSize)size;
 @end

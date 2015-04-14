@@ -10,4 +10,7 @@
 
 @interface DemoFighterBody : SKSpriteNode
 
+- (void) createFighterSpriteForWindow: (CGSize)size;
+- (BOOL)didTapFighterFaceAtLocation: (CGPoint) location;
+- (void) animateHit;
 @end
