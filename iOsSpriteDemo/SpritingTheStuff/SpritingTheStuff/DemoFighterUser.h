@@ -10,5 +10,7 @@
 
 @interface DemoFighterUser : SKSpriteNode
 - (void) animateHitAtPunch: (CGPoint)location;
-- (void) createFighterSpriteForWindow: (CGSize)size;
+- (void) createFighterSpriteForWindow: (CGSize)size withFighter: (CGSize)fighter;
+- (BOOL)canPunchHere: (CGPoint)location;
+
 @end

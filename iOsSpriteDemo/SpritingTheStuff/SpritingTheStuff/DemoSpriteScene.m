@@ -33,7 +33,7 @@
     }
     if (!_user) {
         _user = [[DemoFighterUser alloc] init];
-        [_user createFighterSpriteForWindow:self.view.bounds.size];
+        [_user createFighterSpriteForWindow:self.view.bounds.size withFighter:_enemy.getFighterSize];
     }
     self.backgroundColor = [SKColor blueColor];
     self.scaleMode = SKSceneScaleModeAspectFit;
@@ -50,6 +50,8 @@
     CGPoint location = [touch locationInNode:self];
     
     NSLog(@"Touch: (%f,%F)", [touch locationInView:self.view].x, [touch locationInView:self.view].y);
+    
+    [_user animateHitAtPunch:location];
     
     if ( [_enemy didTapFighterFaceAtLocation:location] ) {
         [_enemy animateHit];

@@ -45,6 +45,10 @@
     return fighterHead;
 }
 
+- (CGSize)getFighterSize {
+    return _fighterBody.size;
+}
+
 /*
   called from scene to see when a user tapped an area if that area is the fighter's face
  */

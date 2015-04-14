@@ -14,16 +14,27 @@
 @property (strong, nonatomic) SKSpriteNode* userLeftFist;
 @property CGPoint minBounds;        // Min bounds for the punch area
 @property CGPoint maxBounds;        // Max bounds for the punch area
+@property float center;
+@property float handScale;
 @end
 
 @implementation DemoFighterUser
 
-- (void) createFighterSpriteForWindow: (CGSize)size
+- (void) createFighterSpriteForWindow: (CGSize)size withFighter: (CGSize)fighter
 {
+    _center = size.width / 2;
+    NSLog(@"Center: %f : %f", _center, size.width);
+    SKAction* rotate;
     [self setPunchingArea:size];
-    _userLeftFist = [self newDemoFist:size Orientation:false];
+    
+    rotate = [SKAction rotateByAngle: (M_PI / 8) duration:0];
+    _userLeftFist = [self newDemoFist:size withBodySize: fighter Orientation:false];
+    [_userLeftFist runAction:rotate];
     [self addChild:_userLeftFist];
-    _userRightFist = [self newDemoFist:size Orientation:true];
+    
+    rotate = [SKAction rotateByAngle: -(M_PI / 8) duration:0];
+    _userRightFist = [self newDemoFist:size withBodySize: fighter Orientation:true];
+    [_userRightFist runAction:rotate];
     [self addChild:_userRightFist];
 }
 
@@ -33,13 +44,13 @@
 - (void) setPunchingArea: (CGSize)size
 {
     _minBounds.x = size.width * 0.25;
-    _minBounds.y = size.height * 0.25;
+    _minBounds.y = size.height * 0.50;
     _maxBounds.x = size.width * 0.80;
-    _maxBounds.y = size.height * 0.60;
+    _maxBounds.y = size.height * 0.9;
 }
 
 /* Sprite Creation methods */
-- (SKSpriteNode*)newDemoFist: (CGSize)size Orientation: (BOOL) orientation
+- (SKSpriteNode*)newDemoFist: (CGSize)size  withBodySize: (CGSize)body Orientation: (BOOL) orientation
 {
     NSString *imagePath;
     if ( orientation ) {
@@ -49,10 +60,13 @@
     }
     SKSpriteNode* fist = [SKSpriteNode spriteNodeWithImageNamed:imagePath];
     if ( orientation ) {
-        fist.position = CGPointMake((size.width *  0.25), (size.height * 0.6));
+        fist.position = CGPointMake((size.width *  0.25), (size.height * 0.5));
     } else {
-        fist.position = CGPointMake((size.width *  0.75), (size.height * 0.6));
+        fist.position = CGPointMake((size.width *  0.75), (size.height * 0.5));
     }
+    _handScale = (body.width * 0.75) / body.width;
+    [fist setScale:_handScale];
+    
     return fist;
 }
 
@@ -70,21 +84,51 @@
  */
 - (void)animateHitAtPunch: (CGPoint)location
 {
+    if ( location.x > _center) {
+        [self punchFace:_userLeftFist AtLocation:location];
+    } else {
+        [self punchFace:_userRightFist AtLocation:location];
+    }
+}
+
+- (void)punchFace: (SKSpriteNode*)fist AtLocation: (CGPoint)location
+{
     int i;
     if ( ![self canPunchHere:location] ) {
         return;
     }
     NSMutableArray* actions;
+    if ( !actions )
+        actions = [[NSMutableArray alloc] init];
+    NSLog(@"(%0.2f, %0.2f) to (%0.2f, %0.2f)", location.x, location.y, fist.position.x, fist.position.y);
     for ( i=0; i < 10; i++ ) {
         NSMutableArray *punchChanges;
-        if ( punchChanges )
-             punchChanges = [[NSMutableArray alloc] init];
-        float scaling = 1.0 - (i * 0.2);
-        float xScale = (location.x - _userLeftFist.position.x) * (1 - (i * 0.1));
-        float yScale =  (location.y - _userLeftFist.position.y) * (1 - (i * 0.1));;
+        if ( !punchChanges )
+            punchChanges = [[NSMutableArray alloc] init];
         
-        SKAction* resize = [SKAction scaleTo:scaling duration:0.1];
-        SKAction* movement = [SKAction moveByX:xScale y:yScale duration:0.1];
+        float scaling = _handScale - (i * 0.025);
+        float xScale = (location.x - fist.position.x) * 0.1;
+        float yScale =  (location.y - fist.position.y) * 0.1;
+        
+        SKAction* resize = [SKAction scaleTo:scaling duration:0.01];
+        SKAction* movement = [SKAction moveByX:xScale y:yScale duration:0.01];
+        
+        [punchChanges addObject:resize];
+        [punchChanges addObject:movement];
+        SKAction* step = [SKAction group:punchChanges];
+        [actions addObject:step];
+    }
+    for ( i=9; i >= 0; i-- ) {
+        NSMutableArray *punchChanges;
+        if ( !punchChanges )
+            punchChanges = [[NSMutableArray alloc] init];
+        
+        float scaling = _handScale - (i * 0.025);
+        float xScale = (fist.position.x - location.x) * 0.1;
+        float yScale =  (fist.position.y - location.y) * 0.1;
+        
+        SKAction* resize = [SKAction scaleTo:scaling duration:0.01];
+        SKAction* movement = [SKAction moveByX:xScale y:yScale duration:0.01];
         
         [punchChanges addObject:resize];
         [punchChanges addObject:movement];
@@ -92,7 +136,7 @@
         [actions addObject:step];
     }
     SKAction* move = [SKAction sequence:actions];
-    [_userLeftFist runAction:move];
+    [fist runAction:move];
 }
 
 @end

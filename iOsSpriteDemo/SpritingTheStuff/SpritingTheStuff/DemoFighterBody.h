@@ -12,5 +12,8 @@
 
 - (void) createFighterSpriteForWindow: (CGSize)size;
 - (BOOL)didTapFighterFaceAtLocation: (CGPoint) location;
+
+- (CGSize)getFighterSize;
+
 - (void) animateHit;
 @end

@@ -31,10 +31,6 @@
     NSError *error = [[NSError alloc] init];
     NSArray *directoryAndFileNames = [fm contentsOfDirectoryAtPath:path error:&error];
     
-    for (NSString* str in directoryAndFileNames) {
-        NSLog(@"Found: '%@' in bundle", str);
-    }
-    
 }
 
 -(void) viewWillAppear:(BOOL)animated
