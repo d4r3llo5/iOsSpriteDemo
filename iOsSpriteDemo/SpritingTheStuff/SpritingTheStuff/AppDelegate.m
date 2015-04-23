@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SpriteSceneView.h"
+#import "DemoSpriteViewController.h"
+#import "DemoMainMenuControllerViewController.m"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Create home window
+//    DemoSpriteViewController* mainMenu;
+//    mainMenu = [[DemoSpriteViewController alloc] initWithNibName:@"DemoSpriteViewController"
+//                                                              bundle:[NSBundle mainBundle]];     // Init window with the NiB
+
+    DemoMainMenuControllerViewController* mainMenu;
+    mainMenu = [[DemoMainMenuControllerViewController alloc] initWithNibName:@"DemoMainMenuControllerViewController" bundle:[NSBundle mainBundle]];
+    
+    // Set the first window to be the title screen
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = mainMenu;
+    
+    // Draw it?
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

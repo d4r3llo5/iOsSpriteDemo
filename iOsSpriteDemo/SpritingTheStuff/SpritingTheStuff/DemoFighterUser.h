@@ -12,5 +12,6 @@
 - (void) animateHitAtPunch: (CGPoint)location;
 - (void) createFighterSpriteForWindow: (CGSize)size withFighter: (CGSize)fighter;
 - (BOOL)canPunchHere: (CGPoint)location;
+- (void)reenablePunch: (CGPoint)location;
 
 @end

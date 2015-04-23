@@ -13,8 +13,10 @@
 #import <SpriteKit/SpriteKit.h>
 #import "DemoFighterBody.h"
 #import "DemoFighterUser.h"
-
+#import "DemoHealthBar.h"
 @interface DemoSpriteScene : SKScene
+
+- (instancetype) initWithSize:(CGSize)size AndColor:(NSString*) color;
 
 @end
 

@@ -10,10 +10,11 @@
 
 @interface DemoFighterBody : SKSpriteNode
 
-- (void) createFighterSpriteForWindow: (CGSize)size;
+- (instancetype) initWithColor:(NSString *) color;
+- (void) createFighterSpriteForWindow: (CGSize)size WithColor:(NSString *)color;
 - (BOOL)didTapFighterFaceAtLocation: (CGPoint) location;
 
 - (CGSize)getFighterSize;
 
-- (void) animateHit;
+- (void)animateHit;
 @end

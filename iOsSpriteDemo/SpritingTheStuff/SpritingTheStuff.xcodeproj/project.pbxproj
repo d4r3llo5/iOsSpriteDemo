@@ -25,6 +25,13 @@
 		3B105A591ADB11EF00968CE6 /* kit.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3B105A581ADB11EF00968CE6 /* kit.atlas */; };
 		3B50102D1ADD5AEB00DE0B21 /* DemoFighterBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B50102C1ADD5AEB00DE0B21 /* DemoFighterBody.m */; };
 		3B5010301ADD60BC00DE0B21 /* DemoFighterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B50102F1ADD60BC00DE0B21 /* DemoFighterUser.m */; };
+		3B5F83DE1AE03E0800049584 /* DemoSpriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5F83DD1AE03E0800049584 /* DemoSpriteViewController.xib */; };
+		3B5F83E11AE0419800049584 /* DemoHealthBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F83E01AE0419800049584 /* DemoHealthBar.m */; };
+		3BE4E4741AE934580040064B /* DemoMainMenuControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4E4721AE934580040064B /* DemoMainMenuControllerViewController.xib */; };
+		3BE4E47A1AE93F3D0040064B /* EnemyBoxingGlovesLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4E4761AE93F3D0040064B /* EnemyBoxingGlovesLeft.png */; };
+		3BE4E47B1AE93F3D0040064B /* EnemyBoxingGlovesRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4E4771AE93F3D0040064B /* EnemyBoxingGlovesRight.png */; };
+		3BE4E47C1AE93F3D0040064B /* GlenFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4E4781AE93F3D0040064B /* GlenFace.png */; };
+		3BE4E47E1AE940BE0040064B /* BodyTypeSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4E47D1AE940BE0040064B /* BodyTypeSmall.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,16 @@
 		3B50102C1ADD5AEB00DE0B21 /* DemoFighterBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoFighterBody.m; sourceTree = "<group>"; };
 		3B50102E1ADD60BC00DE0B21 /* DemoFighterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoFighterUser.h; sourceTree = "<group>"; };
 		3B50102F1ADD60BC00DE0B21 /* DemoFighterUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoFighterUser.m; sourceTree = "<group>"; };
+		3B5F83DD1AE03E0800049584 /* DemoSpriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoSpriteViewController.xib; sourceTree = "<group>"; };
+		3B5F83DF1AE0419800049584 /* DemoHealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHealthBar.h; sourceTree = "<group>"; };
+		3B5F83E01AE0419800049584 /* DemoHealthBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHealthBar.m; sourceTree = "<group>"; };
+		3BE4E4701AE934580040064B /* DemoMainMenuControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoMainMenuControllerViewController.h; sourceTree = "<group>"; };
+		3BE4E4711AE934580040064B /* DemoMainMenuControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoMainMenuControllerViewController.m; sourceTree = "<group>"; };
+		3BE4E4721AE934580040064B /* DemoMainMenuControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoMainMenuControllerViewController.xib; sourceTree = "<group>"; };
+		3BE4E4761AE93F3D0040064B /* EnemyBoxingGlovesLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyBoxingGlovesLeft.png; sourceTree = "<group>"; };
+		3BE4E4771AE93F3D0040064B /* EnemyBoxingGlovesRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyBoxingGlovesRight.png; sourceTree = "<group>"; };
+		3BE4E4781AE93F3D0040064B /* GlenFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GlenFace.png; sourceTree = "<group>"; };
+		3BE4E47D1AE940BE0040064B /* BodyTypeSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BodyTypeSmall.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +130,13 @@
 				26D659771ADB03F300A83A2E /* ImageReferences */,
 				3B50102B1ADD5AEB00DE0B21 /* DemoFighterBody.h */,
 				3B50102C1ADD5AEB00DE0B21 /* DemoFighterBody.m */,
+				3B5F83DF1AE0419800049584 /* DemoHealthBar.h */,
+				3B5F83E01AE0419800049584 /* DemoHealthBar.m */,
 				3B50102E1ADD60BC00DE0B21 /* DemoFighterUser.h */,
 				3B50102F1ADD60BC00DE0B21 /* DemoFighterUser.m */,
+				3BE4E4701AE934580040064B /* DemoMainMenuControllerViewController.h */,
+				3BE4E4711AE934580040064B /* DemoMainMenuControllerViewController.m */,
+				3BE4E4721AE934580040064B /* DemoMainMenuControllerViewController.xib */,
 				26BFA0AE1ADAEFD400AE9A68 /* DemoSpriteScene.m */,
 				26BFA0B01ADAEFE300AE9A68 /* DemoSpriteScene.h */,
 				26BFA0AB1ADAEB2000AE9A68 /* SpriteSceneView.m */,
@@ -123,6 +145,7 @@
 				26BFA0861ADADFE300AE9A68 /* AppDelegate.m */,
 				26BFA0881ADADFE300AE9A68 /* DemoSpriteViewController.h */,
 				26BFA0891ADADFE300AE9A68 /* DemoSpriteViewController.m */,
+				3B5F83DD1AE03E0800049584 /* DemoSpriteViewController.xib */,
 				26BFA08B1ADADFE300AE9A68 /* Main.storyboard */,
 				26BFA08E1ADADFE300AE9A68 /* Images.xcassets */,
 				26BFA0901ADADFE300AE9A68 /* LaunchScreen.xib */,
@@ -160,6 +183,10 @@
 		26D659771ADB03F300A83A2E /* ImageReferences */ = {
 			isa = PBXGroup;
 			children = (
+				3BE4E47D1AE940BE0040064B /* BodyTypeSmall.png */,
+				3BE4E4761AE93F3D0040064B /* EnemyBoxingGlovesLeft.png */,
+				3BE4E4771AE93F3D0040064B /* EnemyBoxingGlovesRight.png */,
+				3BE4E4781AE93F3D0040064B /* GlenFace.png */,
 				26AD1E1E1ADC4CF600C108D1 /* KitsHead.png */,
 				3B105A561ADB0AD200968CE6 /* BodyTypeLarge.png */,
 				26D659791ADB03F300A83A2E /* BoxingGloveLeft.png */,
@@ -218,6 +245,7 @@
 				TargetAttributes = {
 					26BFA07D1ADADFE200AE9A68 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = C4L2UWZ57K;
 					};
 					26BFA0961ADADFE300AE9A68 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -251,12 +279,18 @@
 			files = (
 				26BFA08D1ADADFE300AE9A68 /* Main.storyboard in Resources */,
 				26D6597D1ADB03F300A83A2E /* BoxingGloveLeft.png in Resources */,
+				3BE4E47A1AE93F3D0040064B /* EnemyBoxingGlovesLeft.png in Resources */,
 				26BFA0921ADADFE300AE9A68 /* LaunchScreen.xib in Resources */,
+				3BE4E47E1AE940BE0040064B /* BodyTypeSmall.png in Resources */,
+				3B5F83DE1AE03E0800049584 /* DemoSpriteViewController.xib in Resources */,
 				26D6597F1ADB03F300A83A2E /* WiiBoxing.jpg in Resources */,
 				3B105A591ADB11EF00968CE6 /* kit.atlas in Resources */,
+				3BE4E47B1AE93F3D0040064B /* EnemyBoxingGlovesRight.png in Resources */,
 				26AD1E1F1ADC4CF600C108D1 /* KitsHead.png in Resources */,
 				26D6597E1ADB03F300A83A2E /* BoxingGloveRight.png in Resources */,
+				3BE4E4741AE934580040064B /* DemoMainMenuControllerViewController.xib in Resources */,
 				26BFA08F1ADADFE300AE9A68 /* Images.xcassets in Resources */,
+				3BE4E47C1AE93F3D0040064B /* GlenFace.png in Resources */,
 				3B105A571ADB0AD200968CE6 /* BodyTypeLarge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +311,7 @@
 			files = (
 				3B50102D1ADD5AEB00DE0B21 /* DemoFighterBody.m in Sources */,
 				26BFA0AC1ADAEB2000AE9A68 /* SpriteSceneView.m in Sources */,
+				3B5F83E11AE0419800049584 /* DemoHealthBar.m in Sources */,
 				26BFA08A1ADADFE300AE9A68 /* DemoSpriteViewController.m in Sources */,
 				26BFA0AF1ADAEFD400AE9A68 /* DemoSpriteScene.m in Sources */,
 				26BFA0871ADADFE300AE9A68 /* AppDelegate.m in Sources */,
@@ -407,9 +442,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpritingTheStuff/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -417,9 +455,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpritingTheStuff/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

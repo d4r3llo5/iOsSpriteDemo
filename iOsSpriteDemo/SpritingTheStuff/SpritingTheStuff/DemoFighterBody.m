@@ -12,36 +12,58 @@
 
 @property (strong, nonatomic) SKSpriteNode* fighterHead;
 @property (strong, nonatomic) SKSpriteNode* fighterBody;
+@property (strong, nonatomic) NSString* enemyColor;
 
 @end
 
 @implementation DemoFighterBody
 
-- (void) createFighterSpriteForWindow: (CGSize)size
+- (instancetype) initWithColor:(NSString *) color
+{
+    self = [super init];
+    _enemyColor = color;
+    return self;
+}
+
+- (void) createFighterSpriteForWindow: (CGSize)size WithColor:(NSString *)color
 {
     _fighterBody = [self newDemoBodyForWindow:size];
     [self addChild:_fighterBody];
     _fighterHead = [self newDemoHeadForWindow:size Above:(_fighterBody.size.height * 0.75)];
     [self addChild:_fighterHead];
+    _enemyColor = color;
+        NSLog(@"Meow Color is: %@", _enemyColor);
 }
 
 /* Sprite Creation methods */
 - (SKSpriteNode*)newDemoBodyForWindow: (CGSize) size
 {
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"BodyTypeLarge" ofType:@"png"];
+    NSString *imagePath;
+    if ( [_enemyColor isEqualToString:@"red"] ) {
+        imagePath = [[NSBundle mainBundle] pathForResource:@"BodyTypeLarge" ofType:@"png"];
+    } else {
+        imagePath = [[NSBundle mainBundle] pathForResource:@"BodyTypeSmall" ofType:@"png"];
+    }
     SKSpriteNode* fighterBody = [SKSpriteNode spriteNodeWithImageNamed:imagePath];
     fighterBody.position = CGPointMake((size.width / 2), (size.height / 2));
     fighterBody.name = @"fighterBody";
     fighterBody.userInteractionEnabled = false;
+        NSLog(@"Color is: %@", _enemyColor);
     return fighterBody;
 }
 
 - (SKSpriteNode*)newDemoHeadForWindow: (CGSize) size Above: (float) bodyHeight
 {
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"KitsHead" ofType:@"png"];
+    NSString *imagePath;
+    if ( [_enemyColor isEqualToString:@"red"] ) {
+        imagePath = [[NSBundle mainBundle] pathForResource:@"KitsHead" ofType:@"png"];
+    } else {
+        imagePath = [[NSBundle mainBundle] pathForResource:@"GlenFace" ofType:@"png"];
+    }
     SKSpriteNode* fighterHead = [SKSpriteNode spriteNodeWithImageNamed:imagePath];
     fighterHead.position = CGPointMake((size.width / 2), (size.height / 2) + bodyHeight);
     fighterHead.name = @"fighterHead";
+        NSLog(@"Color is: %@", _enemyColor);
     return fighterHead;
 }
 

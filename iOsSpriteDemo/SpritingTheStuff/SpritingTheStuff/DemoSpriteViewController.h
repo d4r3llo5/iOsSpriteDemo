@@ -11,6 +11,7 @@
 
 @interface DemoSpriteViewController : UIViewController
 
+- (instancetype) initWithNibName: (NSString *) nibName AndTeamColor: (NSString *)color bundle:(NSBundle *)nibBundleOrNil;
 
 @end
 

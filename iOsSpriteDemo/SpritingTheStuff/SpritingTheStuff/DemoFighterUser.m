@@ -16,12 +16,16 @@
 @property CGPoint maxBounds;        // Max bounds for the punch area
 @property float center;
 @property float handScale;
+@property BOOL leftDisabled;
+@property BOOL rightDisabled;
 @end
 
 @implementation DemoFighterUser
 
 - (void) createFighterSpriteForWindow: (CGSize)size withFighter: (CGSize)fighter
 {
+    _rightDisabled = false;
+    _leftDisabled = false;
     _center = size.width / 2;
     NSLog(@"Center: %f : %f", _center, size.width);
     SKAction* rotate;
@@ -85,22 +89,38 @@
 - (void)animateHitAtPunch: (CGPoint)location
 {
     if ( location.x > _center) {
-        [self punchFace:_userLeftFist AtLocation:location];
+        if  ( !_leftDisabled ) {
+            _leftDisabled = true;
+            [self punchFace:_userLeftFist AtLocation:location];
+        }
     } else {
-        [self punchFace:_userRightFist AtLocation:location];
+        if ( !_rightDisabled ) {
+            [self punchFace:_userRightFist AtLocation:location];
+            _rightDisabled = true;
+        }
+    }
+}
+
+
+/*
+ called from scene to reanimate punch after actions completed
+ */
+- (void)reenablePunch: (CGPoint)location
+{
+    if ( location.x > _center) {
+        _leftDisabled = false;
+    } else {
+        _rightDisabled = false;
     }
 }
 
 - (void)punchFace: (SKSpriteNode*)fist AtLocation: (CGPoint)location
 {
     int i;
-    if ( ![self canPunchHere:location] ) {
-        return;
-    }
+
     NSMutableArray* actions;
     if ( !actions )
         actions = [[NSMutableArray alloc] init];
-    NSLog(@"(%0.2f, %0.2f) to (%0.2f, %0.2f)", location.x, location.y, fist.position.x, fist.position.y);
     for ( i=0; i < 10; i++ ) {
         NSMutableArray *punchChanges;
         if ( !punchChanges )
@@ -136,7 +156,9 @@
         [actions addObject:step];
     }
     SKAction* move = [SKAction sequence:actions];
-    [fist runAction:move];
+    [fist runAction:move completion:^(){
+        [self reenablePunch:location];
+    }];
 }
 
 @end
